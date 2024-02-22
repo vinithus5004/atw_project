@@ -28,10 +28,10 @@ function openModal(countryName){
         <li><strong>Official Name: </strong>${country.name.official}</li>
         <li><strong>Common Name: </strong>${country.name.common}</li>
         <li><strong>Capital: </strong>${country.capital[0]}</li>
-        <li><strong>Region: </strong>(${country.region})</li>
+        <li><strong>Region: </strong>${country.region}</li>
         <li><strong>Subregion: </strong>${country.subregion}</li>
         <li><strong>Population: </strong>${country.population}</li>
-        <li><strong>LatLng: </strong>${country.latlng}</li>
+        <li><strong>LatLng: </strong>[${country.latlng}]</li>
         <li><strong>Time Zones: </strong>[${country.timezones}]</li>
         <li><strong>Borders: </strong>${country.borders ?? 'none'}</li>
         <li><strong>Landlocked: </strong>${country.landlocked ? 'Yes' : 'No'}</li>

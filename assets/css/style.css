@@ -143,8 +143,8 @@
     position: relative;
 }
 .country .flag{
-    width: 360px;
-    height: 240px;
+    width: 90%;
+    height: 80%;
 }
 .country .flag img{
     width: 100%;
@@ -154,6 +154,7 @@
 .country .country-name{
     text-align: center;
     margin-top: 10px;
+    font-weight: 900;
 }
 
 .country .see-more{
@@ -214,6 +215,7 @@
     padding-bottom: 8px;
     border-bottom: 1px solid #ccc;
     display: flex;
+    justify-content: space-between;
 }
 .modal .images-container img{
     height: 250px;
@@ -236,4 +238,78 @@
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+/* ---------- Responsivity ---------- */
+@media (max-width: 1300px){
+    .main-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 1300px) and (min-width: 1050px){
+    .country{
+        width: 500px;
+        height: 375px;
+    }
+}
+
+@media (max-width: 900px){
+    .search-bar{
+        width: 400px;
+    }
+    
+}
+@media (max-width: 880px){
+    .main-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .modal-container .modal{
+        width: 700px;
+    }
+}
+@media (max-width: 800px){
+    .search-bar{
+        width: 300px;
+        padding-top: 10px;
+    }
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
+    }
+    .header .logo{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .header .button-container{
+        padding-top: 10px;
+    }
+    .modal-container .modal{
+        width: 600px;
+    }
+}
+@media (max-width: 620px){
+    .modal-container .modal{
+        width: 500px;
+    }
+    .modal .images-container img{
+        height: 250px;
+        width: 45%;
+    }
+}
+@media (max-width: 500px){
+    .modal-container .modal{
+        width: 100%;
+        height: 90vh;
+    }
+}
+@media (max-width: 425px){
+    .country{
+        width: 300px;
+        height: 225px;
+    }
+    .main-content{
+        padding: 8px;
+    }
 }
