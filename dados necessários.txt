@@ -1,0 +1,15 @@
+-- official name (cca2)
+-- common name
+-- capital
+-- population
+-- view on map
+-- region
+-- subregion
+-- United Natinos member? yes | no
+-- LatLng (latitude e longitude)
+-- timezones
+-- coat of arms
+-- flag
+-- borders (divisa)
+-- independent
+-- landlocked
