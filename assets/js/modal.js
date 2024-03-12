@@ -7,6 +7,8 @@ closeModal.addEventListener('click', () =>{
     modalContainer.style.visibility = 'hidden';
 
     modal.innerHTML = '';
+
+    document.querySelector('body').style.overflow = 'auto';
 });
 
 function getCountryObject(countryName){
@@ -16,6 +18,8 @@ function getCountryObject(countryName){
 }
 
 function openModal(countryName){
+    document.querySelector('body').style.overflow = 'hidden';
+
     let country = getCountryObject(countryName);
 
     let htmlContent = 

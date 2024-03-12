@@ -39,14 +39,23 @@ function toContentPage(){
 }
 
 function search(inputValue){
-    let newArray = countries.filter(country => 
-        country.name.common.toLowerCase().includes(inputValue)
-        || country.name.official.toLowerCase().includes(inputValue)
-        || country.translations.por.common.toLowerCase().includes(inputValue)
-        || country.translations.por.official.toLowerCase().includes(inputValue)
-    );
+    if(inputValue.trim()){
 
-    render(newArray);
+        let newArray = countries.filter(country => 
+            country.name.common.toLowerCase().includes(inputValue.toLowerCase())
+            || country.name.official.toLowerCase().includes(inputValue.toLowerCase())
+            || country.translations.por.common.toLowerCase().includes(inputValue.toLowerCase())
+            || country.translations.por.official.toLowerCase().includes(inputValue.toLowerCase())
+        );
+
+        toContentPage();
+
+        if(newArray.length > 0){
+            render(newArray);
+        }else{
+            mainContent.innerHTML = `<span>Nenhum resultado para <strong>"${inputValue}"</strong></span>`;
+        }
+    }
 }
 
 /* Voltando pra Home */
@@ -59,11 +68,10 @@ document.querySelector('.list-all').addEventListener('click', () => {
 });
 
 /* busca por pesquisa */
-document.querySelector('.search-icon').addEventListener('click', () => {
-    let inputValue = input.value.trim().toLowerCase();
+document.querySelector('.search-icon').addEventListener('click', () => search(input.value));
 
-    if(inputValue){
-        toContentPage();
-        search(inputValue);
+window.addEventListener('keydown', (event) => {
+    if(event.key.toLowerCase() === 'enter'){
+        search(input.value);
     }
 });
