@@ -1,12 +1,12 @@
 const modalContainer = document.querySelector('.modal-container');
-const modal = document.querySelector('.modal-container .modal');
+const countryInfo = document.querySelector('.modal-container .modal .country-info');
 const closeModal = document.querySelector('.close-modal i');
 
 closeModal.addEventListener('click', () =>{
     modalContainer.style.opacity = 0;
     modalContainer.style.visibility = 'hidden';
 
-    modal.innerHTML = '';
+    countryInfo.innerHTML = '';
 
     document.querySelector('body').style.overflow = 'auto';
 });
@@ -43,7 +43,7 @@ function openModal(countryName){
         <li><strong>United Nations member?  </strong>${country.unMember ? 'Yes' : 'No'}</li>
     </ul>`;
 
-    modal.innerHTML = htmlContent;
+    countryInfo.innerHTML = htmlContent;
 
     modalContainer.style.opacity = 1;
     modalContainer.style.visibility = 'visible';

@@ -198,11 +198,14 @@ body{
 .modal-container .modal{
     background-color: #fff;
     width: 800px;
-    height: 70vh;
-    border-radius: 10px;
+    height: min(70vh, 500px);
+    border-radius: 10px; 
+    padding: 1rem;
+}
+.modal-container .modal .country-info{
+    height: 100%;
     overflow-y: auto;
     scrollbar-width: thin;
-    padding: 1rem;
 }
 .modal-container .close-modal{
     font-size: 3rem;
@@ -242,8 +245,22 @@ body{
     font-size: 0.875rem;
     text-align: center;
     position: fixed;
-    bottom: 0;
+    bottom: 8px;
     left: 0;
+}
+.footer span{
+    display: block;
+    line-height: 1.4em;
+}
+.footer .credits{
+    font-size: 0.75rem;
+}
+.footer .credits a{
+    text-decoration: none;
+    color: var(--text-color-copyright);
+}
+.footer .credits a:hover{
+    text-decoration: underline;
 }
 
 /* ---------- Responsivity ---------- */
